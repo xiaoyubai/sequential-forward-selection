@@ -14,6 +14,10 @@ from sklearn.feature_selection.base import SelectorMixin
 
 class FFS(BaseEstimator, MetaEstimatorMixin, SelectorMixin):
     """Feature ranking with forward feature selection.
+    
+    Modification from backward feature selection from:
+    https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/feature_selection/rfe.py
+    
     Given an external estimator that assigns weights to features (e.g., the
     coefficients of a linear model), the goal of forward feature selection
     (FFS) is to select features by recursively considering larger and larger
